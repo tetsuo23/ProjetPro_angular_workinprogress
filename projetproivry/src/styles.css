@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html,
+body {
+  height: 200vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+.mat-typography h1 {
+  font-family: Exo 2;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.mat-typography h2 {
+  font-family: 'Montserrat', sans-serif;
+  z-index: 99;
+
+}
+
+.mat-typography h3 {
+  font-family: 'Montserrat', sans-serif;
+  z-index: 99;
+
+}
+
+.navlist {
+  margin-top: 25%;
+}
+
+.container section .content {
+  max-width: 80%;
+}
+
+.container section .content p {
+  left: 60px
+}
+
+@media screen and (min-width:1281px) {
+  .mat-typography h2 {}
+
+  .mat-drawer-inner-container {
+    overflow: hidden !important;
+  }
+}

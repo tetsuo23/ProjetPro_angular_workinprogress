@@ -1,0 +1,45 @@
+<mat-nav-list class="">
+  <!-- <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+    <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
+  </a>
+  <a mat-list-item routerLink="/owner" (click)="onSidenavClose()">
+    <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Owner Actions</span>
+  </a>
+  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+    <mat-icon>account_balance</mat-icon><span class="nav-caption">Account Actions</span>
+  </a> -->
+  <div class="col-3 offset-9 col-md-3">
+    <button class="btn btn-secondary cross" (click)="onSidenavClose()">
+      <img src="../../assets/cross.png" alt="" srcset="../../assets/cross.png 1x">
+    </button>
+  </div>
+  <div class="row">
+    <div class="nav-link col-12" (click)="onSidenavClose()" id="titre">
+      <h1>Festival du film d'Ivry</h1>
+    </div>
+  </div>
+
+
+  <div class="col-12">
+    <h2>Les entreprises rencontrent le 7ème art... </h2>
+  </div>
+
+
+
+  <div class="navlist">
+
+    <ul>
+
+      <a class="nav-link" (click)="onSidenavClose()" (click)="to2()">Home</a>
+      <a class="nav-link" (click)="onSidenavClose()" (click)="to3()">A propos</a>
+      <a class="nav-link" (click)="onSidenavClose()" (click)="to4()">Films en compétiton</a>
+      <a class="nav-link" (click)="onSidenavClose()">Réalisateurs</a>
+      <a class="nav-link" (click)="onSidenavClose()">Entreprises</a>
+      <a class="nav-link" (click)="onSidenavClose()">Actualités</a>
+      <a class="nav-link" (click)="onSidenavClose()">Agenda</a>
+      <a class="nav-link" (click)="onSidenavClose()">Contact</a>
+      <a class="nav-link active" (click)="onSidenavClose()">Active</a>
+    </ul>
+
+  </div>
+</mat-nav-list>
