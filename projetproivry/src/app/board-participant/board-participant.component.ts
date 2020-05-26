@@ -19,7 +19,7 @@ import { startWith } from 'rxjs/operators';
   templateUrl: './board-participant.component.html',
   styleUrls: ['./board-participant.component.css']
 })
-export class BoardParticipantComponent implements OnInit {
+export class BoardParticipantComponent implements OnInit, OnDestroy {
   content = '';
   isLoggedIn = false;
   username: string;
@@ -75,7 +75,7 @@ export class BoardParticipantComponent implements OnInit {
     }
   }
   // ---------------- chat SocketIO ----------------
-  gOnDestroy() {
+  ngOnDestroy() {
     this._docSub.unsubscribe();
   }
 

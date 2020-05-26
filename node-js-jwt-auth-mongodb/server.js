@@ -4,22 +4,22 @@ const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
 const postRoute = require('./app/routes/post.routes');
 const userRoute = require('./app/routes/user.routes');
-const app = express();
+const app = require('express')();
 
 // ---------------- chat SocketIO ----------------
 
 const connectionString = 'mongodb+srv://tetsuo23:AKIRAn23@cluster0-ookjt.mongodb.net/Festival_Ivry_user?retryWrites=true&w=majority'
-const http = require('http');
-const server = http.Server(app);
+const http = require('http').Server(app);
+// const server = http.Server(app);
 const socketIO = require('socket.io');
-const io = socketIO(server);
+const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
 const documents = {};
 // io.on('connection', (socket) => {
 //   console.log('user connected');
 // });
 
-server.listen(port, () => {
+http.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 io.on("connection", socket => {
@@ -28,6 +28,7 @@ io.on("connection", socket => {
     socket.leave(previousId);
     socket.join(currentId);
     previousId = currentId;
+    console.log('user connected');
   };
 
   socket.on("getDoc", docId => {
