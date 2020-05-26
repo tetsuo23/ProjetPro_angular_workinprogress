@@ -8,7 +8,7 @@ const app = express();
 
 // ---------------- chat SocketIO ----------------
 
-
+const connectionString = 'mongodb+srv://tetsuo23:AKIRAn23@cluster0-ookjt.mongodb.net/Festival_Ivry_user?retryWrites=true&w=majority'
 const http = require('http');
 const server = http.Server(app);
 const socketIO = require('socket.io');
@@ -72,7 +72,8 @@ app.use('/posts', postRoute);
 
 
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  // .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  .connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

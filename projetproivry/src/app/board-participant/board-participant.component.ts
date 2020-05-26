@@ -64,6 +64,8 @@ export class BoardParticipantComponent implements OnInit {
         .getPosts()
         .subscribe((data: Post[]) => {
           this.posts = data;
+          console.log(this.posts);
+          console.log(data);
         });
       this._docSub = this.chatService.currentDocument.pipe(
         startWith({ id: '', doc: 'Select an existing document or create a new one to get started' })
