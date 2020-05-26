@@ -5,11 +5,13 @@ const dbConfig = require("./app/config/db.config");
 const postRoute = require('./app/routes/post.routes');
 const userRoute = require('./app/routes/user.routes');
 const app = require('express')();
+const app2 = require('express')();
+
 
 // ---------------- chat SocketIO ----------------
 
 const connectionString = 'mongodb+srv://tetsuo23:AKIRAn23@cluster0-ookjt.mongodb.net/Festival_Ivry_user?retryWrites=true&w=majority'
-const http = require('http').Server(app);
+const http = require('http').Server(app2);
 // const server = http.Server(app);
 const socketIO = require('socket.io');
 const io = require('socket.io')(http);
