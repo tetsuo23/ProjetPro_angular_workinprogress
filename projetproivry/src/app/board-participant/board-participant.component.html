@@ -74,23 +74,27 @@
                 <div class="col-9">
                   <h2>Tchat</h2>
                 </div>
-                <div class="col-12" routerLinkActive="active">
+              </div>
+              <div class="row">
+                <div class="col-12 " routerLinkActive="active">
                   <!-- <div *ngFor="let message of messageList">
                     <p>{{message.message}}</p>
                   </div>
 
                   <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
                   <button (click)="sendMessage()">Send Message</button> -->
-                  <div class="row">
-                    <div class='sidenav col-2'>
+                  <div class="row chat">
+                    <div class='sidenav col-4 content-chat'>
                       <button class="btn-secondary" (click)='newDoc()'>New Document
                       </button>
 
                       <span [class.selected]='docId === currentDoc' (click)='loadDoc(docId)' *ngFor='let docId of documents | async'>{{ docId }}</span>
                     </div>
-                    <textarea class="col-10" [(ngModel)]='document.doc' (keyup)='editDoc()' placeholder='Start typing...'></textarea>
+                    <textarea class="col-8 content-chat" [(ngModel)]='document.doc' (keyup)='editDoc()' placeholder='Start typing...'></textarea>
                   </div>
                 </div>
+
+
               </div>
               <div>
 
