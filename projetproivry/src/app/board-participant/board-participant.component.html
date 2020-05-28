@@ -33,7 +33,7 @@
                 </div>
               </div>
               <div class="row liste" *ngFor=" let post of posts; let i=index">
-                <div class="col-8 d-flex justify-content-between">
+                <div class="col-12 col-md-8 d-flex justify-content-between">
                   <h3>{{ post.title }}</h3>
                   <h3>{{ post.date | date:'dd/LLL/yy H:mm'}}</h3>
                   <p>Maj : {{ post.update | date:'dd/LLL/yy H:mm'}}</p>
@@ -57,7 +57,7 @@
               </div>
               <div>
                 <div class="row liste" *ngFor=" let post of posts; let i=index">
-                  <div class="col-8 d-flex justify-content-between">
+                  <div class="col-12 col-md-8 d-flex justify-content-between">
                     <h3>{{ post.date | date:'dd/LLL/yyyy H:mm'}}</h3>
                     <p>Maj : {{ post.update | date:'dd/LLL/yyyy H:mm'}}</p>
 
@@ -69,7 +69,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 ">
+            <div class="col-12 col-lg-6 ">
               <div class="row titre">
                 <div class="col-9">
                   <h2>Tchat</h2>

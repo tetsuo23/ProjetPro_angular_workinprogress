@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tetsuo-soutenance": {
+      "hosting": {
+        "projetproivry": [
+          "tetsuo-soutenance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "projetproivry",
+      "public": "dist/projetproivry",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
